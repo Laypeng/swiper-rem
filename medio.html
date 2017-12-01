@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>个人简历</title>
+	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <style>
+       * {
+       	margin: 0;
+       	padding: 0;
+       	font-size: .14rem;
+       }
+       html {
+       	font-size: 625%;
+       }
+       html,body {
+       	width: 100%;
+       	height: 100%;
+       	background: #ff0;
+       	background-size: 100% 100%;
+       }
+       .swiper-container {
+       	width: 100%;
+       	height: 100%;
+       	/*min-width: 3.2rem;*/
+       	/*max-width: 6.4rem;*/
+       }
+       .swiper-wrapper {
+       	width: 100%;
+       	height: 100%;
+       }
+       .swiper-slide {
+       	width: 100%;
+       	border-radius: 5%;
+       	position: relative;
+       	margin: 0 auto;
+       }
+       .ani {
+       	border-radius: 5%;
+       	font-size: .4rem;
+       }
+
+       .a {
+       	background: url(img/g1.jpg) no-repeat;
+       	background-size: 100% 100%;
+       }
+       .b {
+       	background: url(img/e1.jpg) no-repeat;
+       	background-size: 100% 100%;
+       }
+       .c {
+       	background: url(img/d9.jpg) no-repeat;
+       	background-size: 100% 100%;
+       }
+       .d {
+       	background: url(img/m6.jpg) no-repeat;
+       	background-size: 100% 100%;
+       }
+       .page1-text1 {
+       	position: absolute;
+       	top: 19%;
+       	left: 21%;
+       	color: #f88;
+       }
+       .page1-text2 {
+       	position: absolute;
+       	top: 20%;
+       	right: 6%;
+       	background: url(img/221.jpg) no-repeat;
+       	background-size: 100% 100%;
+       	width: 30%;
+       	height: 25%;
+       	border-radius: 50%;
+       }
+       .page1-text3 {
+       	position: absolute;
+       	bottom: 33%;
+        width: 30%;
+       	left: 21%;
+       	color: #600;
+       }
+       .page1-text4 {
+       	position: absolute;
+       	bottom: 18%;
+        width: 30%;
+       	right: 10%;
+       	color: #f30;
+       }
+       .page2-text0 {
+       	position: absolute;
+       	bottom: 0;
+       	left: 0;
+       	width: 100%;
+       	height: 60%;
+       	background-size: 100% 100%;
+       }
+       .page2-text1 {
+       	position: absolute;
+       	top: 10%;
+       	left: 10%;
+       	color: #600;
+       }
+       .page2-text2 {
+       	position: absolute;
+       	top: 18%;
+       	left: 10%;
+       	color: #f60;
+       }
+       .page2-text3 {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        color: #a00;
+       }
+       .page2-text4 {
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        color: #af0f88;
+       }
+       .page2-text5 {
+       	position: absolute;
+       	bottom: 20%;
+       	left: 10%;
+       	color: #c00;
+       }
+       
+       .page3-text1 {
+       	position: absolute;
+       	top: 10%;
+       	left: 10%;
+       	color: #f60;
+       }
+       .page3-text2 {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        color: #f60;
+       }
+       .page3-text3 {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        color: #f60;
+       }
+       .page3-text4 {
+       	position: absolute;
+       	top: 38%;
+       	left: 10%;
+       	/*width: 2.5rem;*/
+       	color: #8b4513;
+       }
+
+       .page4-text1 {
+       	position: absolute;
+       	top: 0;
+       	left: 0;
+       	width: 100%;
+       	height: 30%;
+       	background: url(img/hh.gif) no-repeat;
+       	background-size: 100% 100%;
+       	
+       }
+       .page4-text2 {
+       	position: absolute;
+       	top: 12%;
+       	left: 30%;
+		    color: #cfc;
+       }
+       .page4-text3 {
+       	position: absolute;
+       	top: 30%;
+       	left: 10%;
+		    color: #ecf0dd;
+       }
+
+       .music {
+        display: none;
+        width: .6rem;
+        height: .6rem;
+        position: absolute;
+        top: .2rem;
+        right: .2rem;
+        background: url(img/music.svg) no-repeat;
+        background-size: 100% 100%;
+        z-index: 1000;
+       }
+       .music audio {
+        display: none;
+       }
+       .music.move {
+         -webkit-animation: music 1s linear infinite both;
+       }
+       @-webkit-keyframes music {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+       }
+
+       .swiper-container .g {
+            position: absolute;
+            bottom: .1rem;
+            left: 50%;
+            width: 0rem;
+            border: .2rem solid transparent;
+            border-bottom: .3rem solid #66d;
+            height: 0rem;
+            margin-left: -.15rem;
+            z-index: 102;
+            -webkit-animation: dounce 1s linear infinite both;
+            animation: bounce 1s linear infinite both;
+        }
+        @-webkit-keyframes bounce {
+        	0% {
+        		transform: translateY(-.1rem);
+        	}
+        	100% {
+        		transform: translateY(-.2rem);
+        	}
+        }
+        
+    </style>
+</head>
+<body>
+   <div class="swiper-container">
+      		<div class="g"></div>
+            <div class="music" id="musicMuen">
+                <audio src="ibilive.mp3" preload="none" loop id="musicAudio"></audio>
+            </div>
+   	 <div class="swiper-wrapper">
+   	 	<div class="swiper-slide a">
+   	 		<div class="ani page1-text1" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.2s">我叫雷鹏</div>
+   	 		<div class="ani page1-text2" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
+   	 		<div class="ani page1-text3" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.2s">应聘前端工程师</div>
+   	 		<div class="ani page1-text4" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="1.5s">实现自我价值</div>
+   	 	</div>
+   	 	<div class="swiper-slide b">
+   	 	    <div class="ani page2-text0" swiper-animate-effect="flash" swiper-animate-duration="1s" swiper-animate-delay="0.2s"></div>
+   	 		<div class="ani page2-text1" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.4s">熟练使用HTML5/CSS3的新特性</div>
+   	 		<div class="ani page2-text2" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s">熟悉es6特性</div>
+        <div class="ani page2-text3" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">熟练使用原生javaScript、jquery、swiper、bootstrap、MDUI、ajax等前端框架或技术开发web应用</div>
+        <div class="ani page2-text4" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1.2s">熟悉vuejs、reactjs环境下开发移动端单页面应用程序</div>
+   	 		<div class="ani page2-text5" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1.4s">梦想 : 做一个无所不能工程师</div>
+   	 	</div>
+   	 	<div class="swiper-slide c">
+   	 		<div class="ani page3-text1" swiper-animate-effect="tada" swiper-animate-duration="1s" swiper-animate-delay="0.5s">工作经验</div>
+        <div class="ani page3-text2" swiper-animate-effect="tada" swiper-animate-duration="1s" swiper-animate-delay="0.8s">亿美软通科技有限公司</div>
+        <div class="ani page3-text3" swiper-animate-effect="tada" swiper-animate-duration="1s" swiper-animate-delay="1s">web前端工程师</div>
+   	 		<div class="ani page3-text4" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="1.5s">
+        1、负责web端JS交互需求的实现；<br>
+        2、负责给公司的客户提供公司的接口，指导客户搭建业务平台；<br>
+        3、优化HTML代码及其结构，优化载入速度，解决HTML代码不同浏览器的兼容性问题；<br>
+        4、熟悉当前互联网的各种流行应用，在交互开发、用户体验等方面有自己的见解，能主动根据业务需要，提出合理的交互方案.
+</div>
+   	 	</div>
+   	 	<div class="swiper-slide d">
+   	 		<div class="ani page4-text1" swiper-animate-effect="swing" swiper-animate-duration="1s" swiper-animate-delay="0.2s"></div>
+   	 		<div class="ani page4-text2" swiper-animate-effect="zoomIn" swiper-animate-duration="1.2s" swiper-animate-delay="1s">未来规划</div>
+   	 		<div class="ani page4-text3" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s">通过不停的学习掌握更多的新技术，不断的充实自己。学习一门后端语言，让自己能够达到全栈的高度，再学习人工智能方面的知识，为中国的人工智能做贡献</div>
+   	 	</div>
+   	 </div>
+   </div>
+
+   
+    <script>
+       (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                console.log(clientWidth)
+                if (!clientWidth) return;
+                if(clientWidth>=640){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+
+
+	<script>
+    var mySwiper = new Swiper('.swiper-container',{
+ 		direction: 'vertical',
+        loop: true,
+        keyboardContral: true,
+        mousewheelControl : true,
+        mousewheelForceToAxis : true,
+        mousewheelInvert : true,
+        onInit: function (swiper) {
+            swiperAnimateCache(swiper);
+            swiperAnimate(swiper);
+        },
+        onSlideChangeEnd: function (swiper) {
+            swiperAnimate(swiper);
+        },
+
+  //       effect : 'coverflow',
+		// slidesPerView: 1,
+		// centeredSlides: true,
+		// coverflow: {
+  //           rotate: -30,
+  //           stretch: 20,
+  //           depth: 60,
+  //           modifier: 2,
+  //           slideShadows : true
+  //       } 
+
+
+        // effect : 'flip',
+        // flip: {
+        //     slideShadows : true,
+        //     limitRotation : true,
+        // }
+
+  //       effect : 'cube',
+		// cube: {
+		//   slideShadows: true,
+		//   shadow: true,
+		//   shadowOffset: 100,
+		//   shadowScale: 0.6
+		// }
+
+    })
+
+	   
+	</script>
+
+	<script>
+    var musicAudio=document.getElementById('musicAudio');
+    var musicMuen=document.getElementById('musicMuen');
+
+    musicMuen.addEventListener('click',function() {
+        if(musicAudio.paused) {
+            musicAudio.play();
+            musicMuen.className='music move';
+            musicMuen.style.display='block';
+            return;
+        }
+        musicAudio.pause();
+        musicMuen.className='music';
+
+    },false)
+
+    window.setTimeout(controlMusic,1000);
+    function controlMusic() {
+        musicAudio.volume=0.1;
+        musicAudio.play();
+        musicAudio.addEventListener('canplay',function() {
+            musicMuen.style.display='block';
+            musicMuen.className='music move';
+        },false);
+    }
+</script>
+</body>
+</html>

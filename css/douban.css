@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+*,
+::before,
+::after {
+	font-size: .14rem;
+	margin: 0;
+	padding: 0;
+	-webkit-tap-heightlight-color: transparent;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: '微软雅黑',sans-serif;
+}
+input {
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clear::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+ul {
+	list-style: none;
+}
+ul > li {
+	float: left;
+}
+a {
+	text-decoration: none;
+}
+
+
+html {
+	font-size: 625%;
+}
+
+.douban {
+	width: 100%;
+	/*background: #ccc;*/
+}
+.nav {
+	width: 100%;
+	border-bottom: .01rem solid #eee;
+	min-width: 3.2rem;
+}
+.nav span,a {
+	font-size: 0.16rem;
+}
+.nav h1 {
+   padding: 0.08rem 0.15rem;
+}
+.nav h1 a {
+	display: block;
+	font-size: 0.25rem;
+	color: #00b600;
+}
+
+.nav ul li {
+	height: 0.5rem;
+	line-height: 0.5rem;
+	margin-right: 0.2rem;
+}
+.nav ul li a {
+	display: block;
+	color: rgb(35, 132, 232);
+}
+.nav ul li:nth-child(2) a {
+	color: rgb(159, 120, 96);
+}
+.nav ul li:nth-child(3) a {
+	color: rgb(228, 168, 19);
+}
+.nav ul li:nth-child(4) a {
+	color: rgb(42, 184, 204);
+}
+.nav ul li:nth-child(5) a {
+	color: #00b600;
+}
+.nav span {
+	display: block;
+}
+
+.section {
+	width: 100%;
+	min-width: 3.2rem;
+	max-width: 6.4rem;
+	margin: 0 auto;
+    margin-top: 0.2rem;
+	/*border: .01rem solid red;*/
+}
+
+.pict {
+	width: 100%;
+}
+.pict .top {
+	width: 100%;
+	margin-bottom: 0.1rem;
+}
+.pict .top h5 {
+	font-size: 0.16rem;
+	color: #555;
+}
+.pict .top p {
+	color: #00b600;
+}
+
+.pict .bottom {
+	width: 100%;
+	/*overflow: hidden;*/
+	position: relative;
+	/*min-width: 320px;
+	max-width: 640px;*/
+	top: 0;
+	left: 0;
+}
+/*.pict .bottom ul {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200%;
+}*/
+/*.pict .ppd {
+	font-size: .2rem;
+}*/
+.pict .bottom li {
+	text-align: center;
+	/*width: 16.66667%;*/
+}
+.pict .bottom .loop {
+	/*margin-top: 2rem;*/
+	/*padding: .1rem 0;*/
+	/*background: red;*/
+	/*position: absolute;
+	top: -.2rem;
+	left: 0;*/
+}
+.pict .bottom li > a img {
+	width: 1rem;
+	height: 1.43rem;
+	transform: scale(.8);
+	transition: all .5s ease;
+}
+.pict .bottom li:hover > a img {
+	transform: scale(1.1);
+}
+.pict .bottom li p:nth-child(3) span img {
+	width: .1rem;
+	height: .1rem;
+}
+.pict .bottom li p:nth-child(3) span:nth-child(6) a {
+	color: #aaa;
+	font-size: .12rem;
+}
